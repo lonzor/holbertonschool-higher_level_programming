@@ -1,1 +1,1 @@
-This project is the first in learning Python.
+This derectory hold task files for my first project in learning higher level programming languages.
