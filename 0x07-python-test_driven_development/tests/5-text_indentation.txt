@@ -1,0 +1,47 @@
+=========================================
+Task 5: Print New Lines After Punctuation
+=========================================
+
+How it works:
+=============
+Using text_indentation
+Prints text with two new lines after '.' '?' and ':'
+The arg 'text' must be of type str
+
+Import module:
+==============
+    >>> text_indentation = __import__('4-print_square').text_indentation
+
+Test Cases:
+===========
+no args given:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() required arg: 'text'
+
+more than one arg given:
+    >>> text_indentation("Oh", "hey")
+    Traceback (most recent call last):
+    TypeError: text_indentation() only allows one arg: 'text'
+
+text is not of type str:
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+    TypeError: arg 'text' must be of type str
+
+only a character given with no words:
+    >>> text_indentation(?)
+    ?
+
+only a word given with no character:
+    >>> text_indentation("word")
+    word
+
+more than one word with no character:
+    >>> text_indentation("two words")
+    two words
+
+ends in a character:
+    >>> text_indentation("Are you lost?")
+    Are you lost?
+    <BLANKLINE>

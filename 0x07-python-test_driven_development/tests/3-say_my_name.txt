@@ -1,0 +1,45 @@
+=======================================
+Task 3: Prints First Name and Last Name
+=======================================
+
+How it works:
+=============
+Using function say_my_name
+Args first_name and last_name must be strings
+
+Import module:
+==============
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test Cases:
+===========
+no args given:
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name requires args: 'first_name' or 'last_name'
+
+both args given properly:
+    >>> say_my_name("Lonzo", "Rust")
+    My name is Lonzo Rust
+
+first_name is not a str:
+    >>> say_my_name(1, "Rust")
+    Traceback (most recent call last):
+    TypeError: first_name must be of type str
+
+last_name is not a str:
+    >>> say_my_name("Lonzo", 1)
+    Traceback (most recent call last):
+    TypeError: last_name must be of type str
+
+only one arg of correct type:
+    >>> say_my_name("Lonzozo")
+    My name is Lonzozo
+
+args are empty str:
+    >>> say_my_name("", "")
+    My name is
+
+one arg is empy str:
+    >>> say_my_name("Lonzo", "")
+    My name is Lonzo

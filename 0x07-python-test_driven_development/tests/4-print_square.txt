@@ -1,0 +1,43 @@
+====================
+Task 4: Print Square
+====================
+
+How it works:
+=============
+Using print_square function to print a square using a hashtag
+The argument size is the lenght of the square and must be an int
+Size cannot be less than zero
+
+Import module:
+==============
+    >>> print_square = __import__('4-print_square').print_square
+
+Test Cases:
+===========
+no arg given:
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing arg: 'size'
+
+more than one arg:
+    >>> print_square(1, 2)
+    Traceback (most recent call last):
+    TypeError: print_square() takes only one arg: 'size'
+
+size is less than zero:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+size is float:
+    >>> print_square(1.2)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+size is str:
+    >>> print_square("string")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+size is zero:
+    >>> print_square(0)
