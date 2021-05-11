@@ -1,0 +1,71 @@
+==========================
+Task 7: BaseGeometry Class
+==========================
+
+How It Works:
+=============
+Class BaseGeometry
+integer_validator has args (self, name, value)
+value must be an integer
+name will always be a string
+function validates to make sure value is an int
+
+Import Module:
+==============
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Test Cases:
+===========
+passing test with an integer:
+    >>> geom = BaseGeometry()
+    >>> geom.integer_validator("int", 1)
+
+failure due to integer being zero:
+    >>> geom.integer_validator("int", 0)
+    Traceback (most recent call last):
+    ValueError: int must be greater than 0
+
+failure due to negative integer:
+    >>> geom.integer_validator("int", -1)
+    Traceback (most recent call last):
+    ValueError: int must be greater than 0
+
+failure due to no args:
+    >>> geom.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+failure due to only one arg:
+    >>> geom.integer_validator("int")
+    Traceback (most recent call last):
+    TypeError: integer_validator() miss 1 required positional argument: 'value'
+
+failure due to using area:
+    >>> geom.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+failure due to float:
+    >>> geom.integer_validator("float", 1.11)
+    Traceback (most recent call last):
+    TypeError: float must be an integer
+
+failure due to string:
+    >>> geom.integer_validator("string", "word")
+    Traceback (most recent call last):
+    TypeError: string must be an integer
+
+failure due to tuple:
+    >>> geom.integer_validator("tuple", (3, 5))
+    Traceback (most recent call last):
+    TypeError: tuple must be an integer
+
+failure due to bool:
+    >>> geom.integer_validator("bool", True)
+    Traceback (most recent call last):
+    TypeError: bool must be an integer
+
+failure due to None:
+    >>> geom.integer_validator("none", None)
+    Traceback (most recent call last):
+    TypeError: none must be an integer
