@@ -1,0 +1,25 @@
+=============================================
+Task 1: Prints List Sorted In Ascending Order
+=============================================
+
+How It Works:
+=============
+Class MyList inherits from list
+All elements of list will be of type int
+
+Import Module:
+==============
+    >>> MyList = __import__("1-my_list").MyList
+
+Test Cases:
+===========
+list is empty:
+    >>> new_list = MyList()
+    >>> new_list.sorted()
+    >>> []
+
+Failure due to string data type:
+    >>> s = "word"
+    >>> s.print_sorted()
+    Traceback (most recent call last):
+    AttributeError: 'str' object has no attribute 'print_sorted'
