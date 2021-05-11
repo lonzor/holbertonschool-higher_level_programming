@@ -17,8 +17,8 @@ Import Module:
 Test Cases:
 ===========
 passing test with an integer:
-    >>> geom = BaseGeometry()
-    >>> geom.integer_validator("int", 1)
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("int", 1)
 
 failure due to integer being zero:
     >>> geom.integer_validator("int", 0)
