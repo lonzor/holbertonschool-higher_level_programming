@@ -21,51 +21,51 @@ passing test with an integer:
     >>> bg.integer_validator("int", 1)
 
 failure due to integer being zero:
-    >>> geom.integer_validator("int", 0)
+    >>> bg.integer_validator("int", 0)
     Traceback (most recent call last):
     ValueError: int must be greater than 0
 
 failure due to negative integer:
-    >>> geom.integer_validator("int", -1)
+    >>> bg.integer_validator("int", -1)
     Traceback (most recent call last):
     ValueError: int must be greater than 0
 
 failure due to no args:
-    >>> geom.integer_validator()
+    >>> bg.integer_validator()
     Traceback (most recent call last):
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 failure due to only one arg:
-    >>> geom.integer_validator("int")
+    >>> bg.integer_validator("int")
     Traceback (most recent call last):
     TypeError: integer_validator() miss 1 required positional argument: 'value'
 
 failure due to using area:
-    >>> geom.area()
+    >>> bg.area()
     Traceback (most recent call last):
     Exception: area() is not implemented
 
 failure due to float:
-    >>> geom.integer_validator("float", 1.11)
+    >>> bg.integer_validator("float", 1.11)
     Traceback (most recent call last):
     TypeError: float must be an integer
 
 failure due to string:
-    >>> geom.integer_validator("string", "word")
+    >>> bg.integer_validator("string", "word")
     Traceback (most recent call last):
     TypeError: string must be an integer
 
 failure due to tuple:
-    >>> geom.integer_validator("tuple", (3, 5))
+    >>> bg.integer_validator("tuple", (3, 5))
     Traceback (most recent call last):
     TypeError: tuple must be an integer
 
 failure due to bool:
-    >>> geom.integer_validator("bool", True)
+    >>> bg.integer_validator("bool", True)
     Traceback (most recent call last):
     TypeError: bool must be an integer
 
 failure due to None:
-    >>> geom.integer_validator("none", None)
+    >>> bg.integer_validator("none", None)
     Traceback (most recent call last):
     TypeError: none must be an integer
