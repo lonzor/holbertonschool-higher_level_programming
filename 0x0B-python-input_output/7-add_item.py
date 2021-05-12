@@ -12,7 +12,7 @@ try:
     arg_list = load_from_json_file("add_item.json")
 except:
     arg_list = []
-for arg in argv[2:]:
-    arg_list += argv[1:]
+for arg in range(1, len(argv)):
+    arg_list.append(argv[arg])
 
 save_to_json_file(arg_list, "add_item.json")
