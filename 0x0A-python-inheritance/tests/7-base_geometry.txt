@@ -23,21 +23,25 @@ passing test with an integer:
 failure due to integer being zero:
     >>> bg.integer_validator("int", 0)
     Traceback (most recent call last):
+              ...
     ValueError: int must be greater than 0
 
 failure due to negative integer:
     >>> bg.integer_validator("int", -1)
     Traceback (most recent call last):
+              ...
     ValueError: int must be greater than 0
 
 failure due to no args:
     >>> bg.integer_validator()
     Traceback (most recent call last):
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+              ...
+    TypeError: integer_validator() miss 2 required positional arguments: 'name' and 'value'
 
 failure due to only one arg:
     >>> bg.integer_validator("int")
     Traceback (most recent call last):
+              ...
     TypeError: integer_validator() miss 1 required positional argument: 'value'
 
 failure due to using area:
