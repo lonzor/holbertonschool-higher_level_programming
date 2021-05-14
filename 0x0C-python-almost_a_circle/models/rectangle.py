@@ -102,10 +102,10 @@ class Rectangle(Base):
         """
         if self.width == 0 or self.height == 0:
             return
-        for h in range(self.__height):
-            for w in range(self.__width):
-                print("#", end="")
-            print("")
+        print("\n" * self.y, end="")
+        for h in range(self.height):
+            print(" " * self.x, end="")
+            print("#" * self.width)
 
     def __str__(self):
         """
