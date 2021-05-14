@@ -106,3 +106,11 @@ class Rectangle(Base):
             for w in range(self.__width):
                 print("#", end="")
             print("")
+
+    def __str__(self):
+        """
+        Returns a printed statement with width/height
+        and the area on a new line
+        """
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
+            .format(self.id, self.x, self.y, self.width, self.height)
