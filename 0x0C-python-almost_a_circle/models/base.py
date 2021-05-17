@@ -56,3 +56,15 @@ class Base:
                 ml.append(cls.to_dictionary(i))
         with open(name_of_file, 'w') as input_file:
             input_file.write(cls.to_json_string(ml))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns an instance with all attributes already set
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        cls.update(dummy, **dictionary)
+        return dummy
