@@ -4,6 +4,7 @@ Modle for class Base
 Will be the "base" for all other classes
 """
 import json
+from os import path
 
 
 class Base:
@@ -68,3 +69,17 @@ class Base:
             dummy = cls(1)
         cls.update(dummy, **dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Returns a list of instances
+        """
+        instance_list = []
+        name_of_file = cls.__name__ + ".json"
+        if path.exists(name_of_file):
+            with open(name_of_file, encoding="utf-8") as input_file:
+                d_list = cls.from_json_string(input_file.read())
+            for i in d_list:
+                instance_list.append(cls.create(**i))
+        return instance_list
