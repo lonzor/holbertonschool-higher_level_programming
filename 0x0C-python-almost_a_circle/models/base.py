@@ -43,6 +43,6 @@ class Base:
         name_of_file = cls.__name__ + ".json"
         if list_objs is not None:
             for i in list_objs:
-                ml.append(i.to_dictionary())
-            with open(name_of_file, 'w') as input_file:
-                input_file.write(cls.to_json_string(ml))
+                ml.append(cls.to_dictionary(i))
+        with open(name_of_file, 'w') as input_file:
+            input_file.write(cls.to_json_string(ml))
