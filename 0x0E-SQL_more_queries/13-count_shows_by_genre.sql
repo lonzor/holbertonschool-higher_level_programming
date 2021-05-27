@@ -1,6 +1,7 @@
 --  lists all genres from hbtn_0d_tvshows and displays the number of shows linked
-SELECT tv_shows.title, tv_show_genres.genre_id
-FROM tv_shows
-LEFT JOIN tv_show_genres
-ON tv_show_genres.show_id = tv_shows.id
-ORDER BY tv_shows.title, tv_show_genres.genre_id ASC;
+SELECT tv_genres.name AS 'genre', COUNT(*) AS 'number_of_shows'
+FROM tv_show_genres
+LEFT JOIN tv_genres
+ON tv_genres.id = genre_id
+GROUP BY genre_id
+ORDER BY COUNT(*) DESC;
