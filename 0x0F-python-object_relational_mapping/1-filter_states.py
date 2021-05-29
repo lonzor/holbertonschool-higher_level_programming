@@ -16,7 +16,7 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'\
                 ORDER BY id;")
     state_rows = cur.fetchall()
-    for state int state_rows:
+    for state in state_rows:
         print(state)
     cur.close()
     db.close()
