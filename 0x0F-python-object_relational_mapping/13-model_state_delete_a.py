@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-lists all states using SQLAlchemy
-from the database hbtn_0e_0_usa
+deletes all State objects with a name containing
+the letter a from the database hbtn_0e_6_usa
 """
 
 
@@ -20,4 +20,3 @@ if __name__ == "__main__":
             session.delete(state_inst)
     session.commit()
     session.close()
-
